@@ -80,21 +80,19 @@ main {
     height: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
 }
 
 .article-section {
     border: 0.5px solid var(--color-white);
 }
 
-#section04 {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+#section02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.direction-section {
-    border: 0.5px solid var(--color-white);
+.container02 {
+    background-color: #fca311;
 }
 
