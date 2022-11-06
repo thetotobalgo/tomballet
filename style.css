@@ -18,9 +18,9 @@ body {
     padding: 0;
     height: 100vh;
 
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
+    display:flex;
+    flex-direction: column;
 }
 
 h1,
@@ -55,10 +55,12 @@ nav {
     width: calc(100%/3);
     justify-content: flex-start;
     font-size: 3rem;
+    
 }
-#nav-logo-section > a {
-    color: var(--color-yellow);
+#nav-logo-section > a:hover{
+    color: #fca311;
 }
+
 
 #nav-menu-section {
     width: calc(100%/3);
@@ -74,19 +76,23 @@ nav {
 
 main {
    flex-grow: 1;
+   display: block;
 }
+
+/*          Article 1           */
 
 .article01 {
     height: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
 }
 
-.article-section {
+.article01 > .article-section {
     border: 0.5px solid var(--color-white);
 }
 
-#section02 {
+.article01 > #section02 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,4 +101,29 @@ main {
 .container02 {
     background-color: #fca311;
 }
+
+/*          Article 2           */
+
+.article02 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.article02 >.article-section {
+    border: 0.5px solid var(--color-white);
+}
+
+/*          Contact           */
+
+.article03 {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.article03 >.article-section {
+    border: 0.5px solid var(--color-white);
+}
+
 
