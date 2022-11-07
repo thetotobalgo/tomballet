@@ -23,10 +23,10 @@
 
     <nav>
         <div class="nav-section" id="nav-logo-section">
-            <a href="#">
+            <!--a href="#">
                 <i class="fa-solid fa-hippo"></i>
 
-            </a>
+            </a>-->
         </div>
         <div class="nav-section" id="nav-menu-section">
             <a id="work">WORK</a>
@@ -56,9 +56,6 @@
     <main>
         <article class="article01">
             <div class="article-section" id="section01">
-                <div class="mini-section" id="side"></div>
-                <div class="mini-section" id="mid"></div>
-                <div class="mini-section" id="side"></div>
             </div>
             <div class="article-section" id="section02">
             </div>
@@ -91,35 +88,38 @@
 
     <script>
         var scene = new THREE.Scene();
+        var container = document.getElementById('nav-logo-section');
+        var w = container.offsetWidth;
+        var h = container.offsetHeight;
+
         var camera = new THREE.PerspectiveCamera(
-        35, window.innerWidth / window.innerHeight,
+        2.4, 100/ 100,
             0.5, 1000
         );
         camera.position.z = 5;
 
-        var renderer = new THREE.WebGLRenderer();
+        var renderer = new THREE.WebGLRenderer({alpha: true });
+        
 
-        var container = document.getElementById('mid');
-        var w = container.offsetWidth;
-        var h = container.offsetHeight;
-        renderer.setSize(w, h);
+        
+        renderer.setSize(100, 100);
         container.appendChild(renderer.domElement);
 
         //Cube
-        var geometry = new THREE.BoxGeometry(1, 1, 1);
-        var material = new THREE.MeshNormalMaterial({ color: 0x00aaff });
+        //var geometry = new THREE.BoxGeometry(0.1,0.1,0.1);
+        var geometry = new THREE.IcosahedronGeometry(0.1);
+        var material = new THREE.MeshNormalMaterial();
 
+        
         var cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
         function animate() {
             requestAnimationFrame(animate);
-            var w = container.offsetWidth;
-            var h = container.offsetHeight;
-
 
             cube.rotation.x += 0.01;
             cube.rotation.y += 0.01;
+        
 
             renderer.render(scene, camera);
         }
