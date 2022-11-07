@@ -109,7 +109,6 @@ main {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    transform: translateX(100%) translateY(-100%);
     
 }
 
@@ -123,7 +122,6 @@ main {
     height: 100%;
     display: grid;
     grid-template-rows: 2fr 1fr;
-    transform: translateX(200%) translateY(-200%);
 }
 
 .article03 >.article-section {

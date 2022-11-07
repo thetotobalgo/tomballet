@@ -6,40 +6,22 @@ var pageactive = 1;
 
 $('#work').click(function (e) {
     e.preventDefault();
-
-    if (pageactive == 2) {
-        article1[0].style.transform = "translateX(-100%)";
-        article2[0].style.transform = "translateX(-100%)";
-        article3[0].style.transform = "translateX(-100%)";
-    }
-    if (pageactive == 3)
-    {
-        article1[0].style.transform = "translateX(-200%)";
-        article2[0].style.transform = "translateX(-200%)";
-        article3[0].style.transform = "translateX(-200%)";
-    }
-    pageactive = 1;
-
+    $('.article01').show();
+    $('.article02').hide();
+    $('.article03').hide();
 });
 
 $('#about').click(function (e) {
     e.preventDefault();
-    if (pageactive == 1) {
-        article1[0].style.transform = "translateX(100%)";
-        article2[0].style.transform = "translateX(100%)";
-        article3[0].style.transform = "translateX(100%)";
-    }
-    if (pageactive == 3)
-    {
-        article1[0].style.transform = "translateX(-100%)";
-        article2[0].style.transform = "translateX(-100%)";
-        article3[0].style.transform = "translateX(-100%)";
-    }
-    pageactive = 2;
+    $('.article01').hide();
+    $('.article02').show();
+    $('.article03').hide();
 });
 
 $('#contact').click(function (e) {
     e.preventDefault();
-
+    $('.article01').hide();
+    $('.article02').hide();
+    $('.article03').show();
 });
 
