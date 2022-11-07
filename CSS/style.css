@@ -104,7 +104,7 @@ main {
 
 #section01 > #mid {
     width: calc(90%);
-    background-color: #e5e5e5;
+    position: static;
 }
 
 /*          Article 2           */
