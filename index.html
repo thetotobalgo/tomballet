@@ -10,10 +10,42 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script src="https://kit.fontawesome.com/2d86bda019.js" crossorigin="anonymous"></script>
     <script src="JS/jquery.js"></script>
+    
 </head>
 
 <body>
-    
+    <script src="JS/three.min.js"></script>
+
+    <script>
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(
+            75, window.innerWidth/window.innerHeight,
+            0.5, 1000
+        );
+        camera.position.z = 5;
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        //Cube
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var material = new THREE.MeshNormalMaterial({color: 0x00aaff});
+
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        function animate(){
+            requestAnimationFrame(animate);
+
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
 
 
     <nav>
@@ -48,14 +80,16 @@
 
     <main>
          <article class="article01">
-            <div class="article-section" id="section01">a</div>
-            <div class="article-section" id="section02">
-                <div class="container02">
-                    Tom Ballet
-                    
-                </div>
+            <div class="article-section" id="section01">
+                <div class="mini-section" id="side"></div>
+                <div class="mini-section" id="mid"></div>
+                <div class="mini-section" id="side"></div>
             </div>
-            <div class="article-section" id="section03">a</div>
+            <div class="article-section" id="section02">
+            </div>
+            <div class="article-section" id="section03">
+
+            </div>
             <div class="article-section" id="section04">a</div>
         </article>
 

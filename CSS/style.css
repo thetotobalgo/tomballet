@@ -93,14 +93,18 @@ main {
     border: 0.5px solid var(--color-white);
 }
 
-.article01 > #section02 {
+.article01 > #section01 {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.container02 {
+#section01 > #side {
+    width: calc(5%);
     background-color: #fca311;
+}
+
+#section01 > #mid {
+    width: calc(90%);
+    background-color: #e5e5e5;
 }
 
 /*          Article 2           */
