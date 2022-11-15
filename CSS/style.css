@@ -129,7 +129,8 @@ main {
 .bubble-wrapper {
     height: 40px;
     width: 40px;
-    margin: 5px;
+    margin: 10px;
+    margin-left: 0;
     border: 2px solid;
 
     display: flex;
@@ -141,8 +142,7 @@ main {
 
 }
 
-.bubble-wrapper:hover {
-    
+.bubble-wrapper:hover { 
     animation: 0.5s shadow;
     
     
