@@ -122,9 +122,11 @@ main {
     margin: 30px;
     margin-left: 0px;
 
+    overflow: hidden;
+
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
 .bubble-wrapper {
@@ -266,7 +268,7 @@ main {
 #submit {
 
     background-color: var(--primary-color);
-    
+
     height: 40px;
     width: 80px;
     margin: 10px;
