@@ -70,7 +70,13 @@ nav {
 #nav-section-menu {
     width: calc(60%);
     display: flex;
-    justify-content: space-around;
+    
+}
+
+.text-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -86,7 +92,6 @@ nav {
     flex-direction: column;
     justify-content: center;
 
-    margin-left: 30px;
     margin-right: 30px;
     padding-left: 10px;
     border-left: 2px solid;
