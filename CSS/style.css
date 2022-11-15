@@ -103,6 +103,7 @@ main {
 .section-main {
     width: 100%;
     height: 85vh;
+    animation: 2s pulse;
 }
 
 .main-container {
@@ -138,29 +139,35 @@ main {
     align-items: center;
 
     border-radius: 5px;
-    box-shadow: 0 2px black;
+    box-shadow: 0 1px 0px 0px black;
 
 }
 
-.bubble-wrapper:active { 
-    animation: 0.5s shadow;
+.bubble-wrapper:hover { 
+    animation: 2s shadow;
 }
 
 @keyframes shadow {
-    100% {
+    50% {
         box-shadow: none;
         transform: translateY(3px);
     }
+    50% {
+        box-shadow: none;
+        transform: translateY(3px);
+    }
+
 }
 
 
 @keyframes pulse {
     0% {
         opacity: 0;
+        transform: translateX(100vw);
     }
 
     50% {
-        transform: scale(1.4);
+        
         opacity: 0.4;
     }
 }
@@ -189,6 +196,7 @@ main {
     width: 20px;
     background-color: #b1b832;
 }
+
 
 
 
@@ -258,14 +266,23 @@ main {
 #submit {
 
     background-color: var(--primary-color);
-    color: black;
-    font-family: 'Space Mono', monospace;
+    
+    height: 40px;
+    width: 80px;
+    margin: 10px;
+    margin-left: 0;
+    border: 2px solid;
 
-    outline: 0;
-    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    cursor: pointer;
-    transition: 0.4s ease-in;
+    border-radius: 5px;
+    box-shadow: 0 1px 0px  black;
+}
+
+#submit:hover { 
+    animation: 2s shadow;
 }
 
 /* ---------------------- contact ---------------------- */
