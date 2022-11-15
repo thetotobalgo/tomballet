@@ -43,6 +43,14 @@ h2 {
     font-weight: 500;
 }
 
+h3 {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 500;
+}
+
 /* ---------------------- nav ---------------------- */
 
 nav {
@@ -120,6 +128,10 @@ main {
 
 .A-section {
     margin: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -295,3 +307,9 @@ main {
 /* ---------------------- contact ---------------------- */
 
 /* ---------------------- about ---------------------- */
+
+#section-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
