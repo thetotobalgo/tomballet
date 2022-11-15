@@ -142,10 +142,8 @@ main {
 
 }
 
-.bubble-wrapper:hover { 
+.bubble-wrapper:active { 
     animation: 0.5s shadow;
-    
-    
 }
 
 @keyframes shadow {
